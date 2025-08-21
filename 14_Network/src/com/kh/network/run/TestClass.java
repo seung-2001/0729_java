@@ -13,6 +13,6 @@ public class TestClass {
 	}
 
 	public void hi() {
-		
+		System.out.println("가보자고~~~~");
 	}
 }
