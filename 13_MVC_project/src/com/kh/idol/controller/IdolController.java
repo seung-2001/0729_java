@@ -335,7 +335,7 @@ public class IdolController {
 		board.setBoardTitle(boardTitle);
 		board.setBoardContent(boardContent);
 		board.setUserId(userId);
-		board.setBoardNo(boardNo++);
+		board.setBoardNo(++boardNo);
 		String createDate = new SimpleDateFormat("yyyy년 MM월 dd일").format(new Date());
 		board.setCreateDate(createDate);
 		
@@ -348,6 +348,15 @@ public class IdolController {
 		// View의 요청에 의해 호출되며,
 		// 게시글 목록이 담겨있는 것을 되돌려주어야함
 		return boards;
+	}
+
+	public Board findByBoardNo(int boardNo) {
+		
+		if(boardNo > this.boardNo) {
+			return null;
+		}
+		
+		return boards.get(boardNo - 1);
 	}
 
 
