@@ -5,7 +5,7 @@ public class Board {
 	private int boardNo;
 	private String boardTitle;
 	private String boardContent;
-	private String userId;
+	private String userId; 
 	private String createDate;
 	
 	public Board() {
@@ -20,43 +20,43 @@ public class Board {
 		this.createDate = createDate;
 	}
 
-	int getBoardNo() {
+	public int getBoardNo() {
 		return boardNo;
 	}
 
-	void setBoardNo(int boardNo) {
+	public void setBoardNo(int boardNo) {
 		this.boardNo = boardNo;
 	}
 
-	String getBoardTitle() {
+	public String getBoardTitle() {
 		return boardTitle;
 	}
 
-	void setBoardTitle(String boardTitle) {
+	public void setBoardTitle(String boardTitle) {
 		this.boardTitle = boardTitle;
 	}
 
-	String getBoardContent() {
+	public String getBoardContent() {
 		return boardContent;
 	}
 
-	void setBoardContent(String boardContent) {
+	public void setBoardContent(String boardContent) {
 		this.boardContent = boardContent;
 	}
 
-	String getUserId() {
+	public String getUserId() {
 		return userId;
 	}
 
-	void setUserId(String userId) {
+	public void setUserId(String userId) {
 		this.userId = userId;
 	}
 
-	String getCreateDate() {
+	public String getCreateDate() {
 		return createDate;
 	}
 
-	void setCreateDate(String createDate) {
+	public void setCreateDate(String createDate) {
 		this.createDate = createDate;
 	}
 
