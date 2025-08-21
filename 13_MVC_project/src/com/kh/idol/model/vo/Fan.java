@@ -15,22 +15,22 @@ public class Fan {
 		this.userPwd = userPwd;
 		this.nickName = nickName;
 	}
-	String getUserId() {
+	public String getUserId() {
 		return userId;
 	}
-	void setUserId(String userId) {
+	public void setUserId(String userId) {
 		this.userId = userId;
 	}
-	String getUserPwd() {
+	public String getUserPwd() {
 		return userPwd;
 	}
-	void setUserPwd(String userPwd) {
+	public void setUserPwd(String userPwd) {
 		this.userPwd = userPwd;
 	}
-	String getNickName() {
+	public String getNickName() {
 		return nickName;
 	}
-	void setNickName(String nickName) {
+	public void setNickName(String nickName) {
 		this.nickName = nickName;
 	}
 	
