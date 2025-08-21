@@ -14,5 +14,14 @@ public class TestClass {
 
 	public void hi() {
 		System.out.println("가보자고~~~~");
+
+	}
+	
+	public void bye() {
+		System.out.println("급하다 급해 빨리가장");
+	}
+	
+	public void gogogo() {
+		System.out.println("한 시간 늦었다아아아앙 빨리쳐야징~");
 	}
 }
