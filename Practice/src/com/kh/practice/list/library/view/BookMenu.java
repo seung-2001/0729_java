@@ -1,6 +1,7 @@
 package com.kh.practice.list.library.view;
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import com.kh.practice.list.library.controller.BookController;
@@ -44,7 +45,7 @@ public class BookMenu {
 					System.out.println("잘못 입력하였습니다. 다시 입력해주세요 ");
 					continue;
 				}
-			} catch (Exception e) {
+			} catch (InputMismatchException e) {
 				e.printStackTrace();
 			}
 

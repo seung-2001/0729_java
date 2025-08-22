@@ -51,6 +51,7 @@ public class BookController {
 				list.remove(i);
 				
 			}
+			break;
 		}
 			return removeBook;
 	}
