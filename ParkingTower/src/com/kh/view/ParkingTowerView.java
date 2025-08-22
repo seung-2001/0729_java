@@ -67,6 +67,7 @@ public class ParkingTowerView {
 			System.out.println("1.경차\t2.세단\t3.SUV\t4.트럭");
 			System.out.print("차량 타입을 선택해주세요 : >> ");
 			int carType = sc.nextInt();
+			sc.nextLine();
 			if (0 < carType && carType < 5) {
 				num = carType;
 				break;
