@@ -5,7 +5,24 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import com.kh.last.Person;
+
 public class Run {
+	
+	/*
+	 * 스트림의 주요 중간 연산
+	 * 
+	 * 1. filter() : 조건에 맞는 요소만 필터링
+	 * 2. map() : 요소를 반환할 때 사용하는 연산
+	 * 3. distinct() : 요소의 중복을 제거할 때
+	 * 
+	 * 스트림의 주요 최종 연산
+	 * 
+	 * 1. collect() : 결과를 컬렉션으로ㅠ 변환
+	 * 2. forEach() : 모든 요소에 대한 작업 수행
+	 * 3. count() : 요소 개수 반환
+	 * 4. reduce() : 요소를 결합해서 단일 결과 만들어낼때 
+	 */
 
 	public static void main(String[] args) {
 		
@@ -119,8 +136,38 @@ public class Run {
 									  .collect(Collectors.toList());
 		System.out.println(lengths);
 		coffee.stream().map(c -> c + "의 길이 : " + c.length())
-					   //.forEach(l -> System.out.println());
+					   //.forEach(l -> System.out.println(l));
 					   .forEach(System.out::println);
+		
+		System.out.println("======================================");
+		
+		List<Person> people = new ArrayList();
+		people = Arrays.asList(
+				new Person("홍길동", "한양", 15),
+				new Person("고길동", "서울", 40),
+				new Person("춘향이", "남원", 20),
+				new Person("콩쥐", "서울", 23)
+				);
+		 System.out.println("서울 사람만 출력하기");
+		 System.out.println("원래 우리의 방식");
+		 for(Person person : people) {
+			 if("서울".equals(person.getAddress())) {
+				 System.out.println(person);
+			 }
+		 }
+		 System.out.println("스트림 방식");
+		 people.stream().filter(person -> "서울".equals(person.getAddress()))
+		 				.forEach(System.out::println);
+		 
+		 // 이름과 주소 출력하기
+		 System.out.println("전통적인 방식");
+		 for(Person person : people) {
+			 System.out.println(person.getName() + "님은" + person.getAddress() + "에 삽니다.");
+		 }
+		 
+		 System.out.println("스트림 방식");
+		 people.stream().map(person -> person.getName() + "님은" + person.getAddress() + "에 삽니다")
+		 				.forEach(System.out::println);
 	}
 	
 	// 함수형 인터페이스 선언
